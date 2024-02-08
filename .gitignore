@@ -1,0 +1,5 @@
+build.py
+__pycache__/*
+style.css
+template.html
+data.json
