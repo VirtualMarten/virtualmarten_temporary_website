@@ -10,7 +10,7 @@
     margin: 0;
     font-family: 'Source Code Pro', monospace;;
     background-color: #101112;
-    color: #eee;}.container {
+    color: #eee;}#main-container {
     text-align: center;
     padding: 0 5vw;
     background-color: #2f4858;
@@ -21,15 +21,19 @@
     border-right: dashed 2px #2f4858;
     border-left: dashed 2px #2f4858;
     filter: drop-shadow(0px 0px 5px #101010);}@media only screen and (max-width: 600px) {
-    .container { max-width: 100%; border: none; }}@media only screen and (min-width: 601px) and (max-width: 800px) {
-    .container { max-width: 60vw; }}@media only screen and (min-width: 801px) and (max-width: 1000px) {
-    .container { max-width: 45vw; }}.construction-image {
+    #main-container { max-width: 100%; border: none; }}@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #main-container { max-width: 60vw; }}@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    #main-container { max-width: 45vw; }}.drop-shadow {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .2));}#construction-image {
     width: 100%;
-    max-width: 500px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .2));}h1 {
-    font-size: x-large;}.small-text {
+    max-width: 500px;}h1 {
+    font-size: x-large;}#construction-text {
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #eee;
+    color: #2f4858;}#construction-subtext {
     font-size: 18px;
-    margin-top: 10px;}.link-container {
+    margin-top: 10px;}#links {
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
@@ -37,26 +41,40 @@
     justify-content: center;
     padding-bottom: 2em;
     gap: 10px;
-    flex-wrap: wrap;}.link {
+    flex-wrap: wrap;}a {
+    color: #eee;}#links > a {
     text-decoration: underline;
-    color: #eee;
-    flex-shrink: 0;}</style>
+    flex-shrink: 0;}#links > a:before {
+    content: '•';
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1em;}</style>
     <title>VirtualMarten.net</title>
 </head>
 <body>
-    <div class="container">
-        <img src="computer_marten.png" alt="cartoon marten working at a desktop computer" class="construction-image">
-        <h1 class="construction-text">Website under construction.</h1>
-        <p class="small-text">In the meantime, here are some links:</p>
-        <div class="link-container">
+    <div id="main-container">
+        <img src="computer_marten.png" alt="cartoon marten working at a desktop computer" id="construction-image" class="drop-shadow" />
+        <p id="bio">I'm a programmer that spends a lot of time on VRChat. I like to draw occasionally and do outdoor activities such as hiking and camping. The funny animal guy above is an American Marten.</p>
+        <h1 id="construction-text" class="drop-shadow">Website under construction.</h1>
+        <p id="construction-subtext">In the meantime, here are some links:</p>
+        <div id="links">
             
-                <a href="https://github.com/VirtualMarten" class="link">GitHub</a>
+                <a href="https://t.me/martens_memes">Marten's Meme channel on Telegram</a>
             
-                <a href="https://t.me/virtualmarten" class="link">Telegram</a>
+                <a href="https://github.com/VirtualMarten?tab=repositories">GitHub repositories</a>
             
-                <a href="https://bsky.app/profile/virtualmarten.net" class="link">Bluesky</a>
+        </div>
+        <div id="socials">
             
-                <a href="https://twitter.com/VirtualMarten" class="link">X (Formally known as Twitter)</a>
+                <a href="https://t.me/virtualmarten" title="Telegram"><img src="telegram.png" alt="The logo for Telegram.org" /></a>
+            
+                <a href="https://vrchat.com/home/user/usr_39f6e530-4ed8-491f-adc1-cee8bb808c03" title="VRChat"><img src="vrchat.png" alt="The logo for VRChat.com" /></a>
+            
+                <a href="https://bsky.app/profile/virtualmarten.net" title="BlueSky"><img src="bluesky.png" alt="The logo for bsky.app" /></a>
+            
+                <a href="https://www.instagram.com/virtualmarten" title="Instagram"><img src="instagram.png" alt="The logo for Instagram.com" /></a>
+            
+                <a href="https://twitter.com/VirtualMarten" title="X (Formally known as Twitter)"><img src="twitter.png" alt="The logo for x.com (or Twitter.com)" /></a>
             
         </div>
     </div>
